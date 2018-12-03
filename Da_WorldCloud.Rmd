@@ -1,0 +1,20 @@
+---
+title: "Types and token frequencies of [dǎ-NP]"
+author: "Steffi Hung"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r echo=FALSE, message=FALSE}
+library("wordcloud2")
+library(here)
+library(rio)
+```
+
+```{r echo=FALSE, message=FALSE}
+data <- import(here("data", "daFreq.xlsx"))
+wordcloud2(data, color = "random-light", backgroundColor = "dark")
+```
